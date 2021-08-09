@@ -2,16 +2,24 @@
 	"manifest_version": 2,
 	"name": "firefox-addon-sample",
 	"version": "0.0.1",
-	"content_scripts": [
-		{
-			"matches": [
-				"http://*/*",
-				"https://*/*"
-			],
-			"js": [
-				"main.js"
-			]
-		}
-	],
-	"permissions": []
+	"icons": {
+		"16": "./icons/16.png",
+		"32": "./icons/32.png",
+		"64": "./icons/64.png",
+		"128": "./icons/128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "./icons/16.png",
+			"32": "./icons/32.png",
+			"64": "./icons/64.png",
+			"128": "./icons/128.png"
+		},
+		"default_title": "addon sample",
+		"default_popup": "./index.html",
+		"browser_style": true
+	},
+	"permissions": [
+		"storage"
+	]
 }
